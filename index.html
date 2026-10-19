@@ -287,6 +287,13 @@ table.cmp tr:nth-child(even) td{background:#fbfaf6;}
 
 footer{padding:36px 0 60px;font-size:12.5px;color:var(--ink-soft);text-align:center;}
 
+/* video */
+.video-box{
+  margin:28px 0 0;border-radius:12px;overflow:hidden;
+  background:#000;box-shadow:0 8px 28px rgba(29,79,102,0.18);
+}
+.video-box video{display:block;width:100%;aspect-ratio:16/9;background:#000;}
+
 @media(max-width:600px){
   header.hero{padding:72px 0 48px;}
   section{padding:48px 0;}
@@ -310,6 +317,7 @@ footer{padding:36px 0 60px;font-size:12.5px;color:var(--ink-soft);text-align:cen
 
 <nav class="toc">
   <div class="wrap">
+    <a href="#video">動畫導覽</a>
     <a href="#evtol">空中計程車是什麼</a>
     <a href="#world">世界進度表</a>
     <a href="#companies">業者進度</a>
@@ -324,7 +332,21 @@ footer{padding:36px 0 60px;font-size:12.5px;color:var(--ink-soft);text-align:cen
 
 <main>
 
-<section id="evtol">
+<section id="video">
+  <div class="wrap">
+    <div class="eyebrow">先看重點</div>
+    <h2 class="title">一支動畫,看完這篇筆記的骨架</h2>
+    <p class="lead">如果沒時間讀完整篇,這支短片用1分45秒講完核心:eVTOL是什麼、各國進度到哪、兩家歐洲先驅為何倒下,以及接下來真正決定勝負的三件事。</p>
+    <div class="video-box">
+      <video controls preload="metadata" poster="video/evtol-explainer-poster.jpg" playsinline>
+        <source src="video/evtol-explainer.mp4" type="video/mp4">
+        您的瀏覽器不支援內嵌影片播放,請<a href="video/evtol-explainer.mp4">直接下載觀看</a>。
+      </video>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="evtol">
   <div class="narrow">
     <div class="eyebrow">01 · 技術解析</div>
     <h2 class="title">「空中計程車」,到底是什麼?</h2>
@@ -346,7 +368,7 @@ footer{padding:36px 0 60px;font-size:12.5px;color:var(--ink-soft);text-align:cen
   </div>
 </section>
 
-<section class="alt" id="world">
+<section id="world">
   <div class="wrap">
     <div class="eyebrow">02 · 國際對照</div>
     <h2 class="title">世界進度表:誰先飛,誰還在等牌照</h2>
@@ -386,7 +408,7 @@ footer{padding:36px 0 60px;font-size:12.5px;color:var(--ink-soft);text-align:cen
   </div>
 </section>
 
-<section id="companies">
+<section class="alt" id="companies">
   <div class="wrap">
     <div class="eyebrow">03 · 業者名單</div>
     <h2 class="title">各家業者,飛到哪了?</h2>
@@ -463,7 +485,7 @@ footer{padding:36px 0 60px;font-size:12.5px;color:var(--ink-soft);text-align:cen
   </div>
 </section>
 
-<section class="alt" id="calc">
+<section id="calc">
   <div class="wrap">
     <div class="eyebrow">04 · 親自算一次</div>
     <h2 class="title">天上比地上,快多少?</h2>
@@ -503,7 +525,7 @@ footer{padding:36px 0 60px;font-size:12.5px;color:var(--ink-soft);text-align:cen
   </div>
 </section>
 
-<section id="sites">
+<section class="alt" id="sites">
   <div class="wrap">
     <div class="eyebrow">05 · 藍圖</div>
     <h2 class="title">一套低空接駁網絡,需要什麼?</h2>
@@ -521,7 +543,7 @@ footer{padding:36px 0 60px;font-size:12.5px;color:var(--ink-soft);text-align:cen
   </div>
 </section>
 
-<section class="alt" id="walls">
+<section id="walls">
   <div class="wrap">
     <div class="eyebrow">06 · 現實</div>
     <h2 class="title">擋在路上的,是三道牆</h2>
@@ -543,7 +565,7 @@ footer{padding:36px 0 60px;font-size:12.5px;color:var(--ink-soft);text-align:cen
   </div>
 </section>
 
-<section id="taiwan">
+<section class="alt" id="taiwan">
   <div class="narrow">
     <div class="eyebrow">07 · 台灣現況</div>
     <h2 class="title">台灣,目前走到哪一步?</h2>
@@ -564,7 +586,7 @@ footer{padding:36px 0 60px;font-size:12.5px;color:var(--ink-soft);text-align:cen
   </div>
 </section>
 
-<section class="alt" id="verdict">
+<section id="verdict">
   <div class="wrap">
     <div class="eyebrow">08 · 結論</div>
     <h2 class="title">從示範飛行,到日常交通,還差多遠?</h2>
@@ -584,7 +606,7 @@ footer{padding:36px 0 60px;font-size:12.5px;color:var(--ink-soft);text-align:cen
   </div>
 </div>
 
-<section id="refs">
+<section class="alt" id="refs">
   <div class="narrow refs">
     <h2 class="title" style="font-size:20px;">參考來源</h2>
     <ol>
