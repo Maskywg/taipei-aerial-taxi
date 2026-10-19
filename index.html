@@ -3,21 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>松山讓出的,不只是一塊地——空中計程車提案研究筆記</title>
-<meta name="description" content="松山機場遷建爭論之外,一則臉書貼文把戰場搬到了天上。整理張景森的低空空域主張、Joby Aviation與億航的全球eVTOL進度、以及台灣目前走到哪裡的獨立研究筆記。">
+<title>空中計程車,飛得到哪裡了?——全球eVTOL進度研究筆記</title>
+<meta name="description" content="從Joby、Archer到億航、小鵬——整理全球空中計程車(eVTOL)產業的技術原理、各家業者認證進度、美日中三地的國際時間表,以及台灣目前的試點現況。">
 
 <!-- Open Graph / Twitter Card -->
 <meta property="og:type" content="article">
-<meta property="og:title" content="松山讓出的,不只是一塊地——空中計程車提案研究筆記">
-<meta property="og:description" content="當所有人盯著地面上的三百公頃怎麼分,一則臉書貼文把戰場搬到了天上。整理空中計程車(eVTOL)的全球進度與台北的低空想像。">
+<meta property="og:title" content="空中計程車,飛得到哪裡了?——全球eVTOL進度研究筆記">
+<meta property="og:description" content="從Joby、Archer到億航、小鵬——整理全球空中計程車(eVTOL)產業的技術原理、各家業者認證進度,以及美日中台的國際時間表。">
 <meta property="og:image" content="https://maskywg.github.io/taipei-aerial-taxi/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:url" content="https://maskywg.github.io/taipei-aerial-taxi/">
 <meta property="og:locale" content="zh_TW">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="松山讓出的,不只是一塊地——空中計程車提案研究筆記">
-<meta name="twitter:description" content="當所有人盯著地面上的三百公頃怎麼分,一則臉書貼文把戰場搬到了天上。整理空中計程車(eVTOL)的全球進度與台北的低空想像。">
+<meta name="twitter:title" content="空中計程車,飛得到哪裡了?——全球eVTOL進度研究筆記">
+<meta name="twitter:description" content="從Joby、Archer到億航、小鵬——整理全球空中計程車(eVTOL)產業的技術原理、各家業者認證進度,以及美日中台的國際時間表。">
 <meta name="twitter:image" content="https://maskywg.github.io/taipei-aerial-taxi/og-image.jpg">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -206,8 +206,14 @@ sup a{font-size:11px;border-bottom:none;color:var(--sky-deep);font-weight:700;}
 @media(max-width:560px){.co-grid{grid-template-columns:1fr;}}
 .co-card{
   background:var(--card);border:1px solid var(--line);border-radius:10px;
-  padding:18px 20px;display:flex;flex-direction:column;gap:8px;
+  padding:18px 20px;display:flex;flex-direction:column;gap:8px;overflow:hidden;
 }
+.co-card .co-photo{
+  margin:-18px -20px 2px;aspect-ratio:4/3;overflow:hidden;background:var(--cream);
+}
+.co-card .co-photo img{width:100%;height:100%;object-fit:cover;display:block;}
+.co-card .credit{font-size:10.5px;color:var(--ink-soft);opacity:.75;margin:-4px 0 2px;}
+.co-card .credit a{border-bottom:none;color:inherit;}
 .co-card .co-top{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;}
 .co-card h3{margin:0;font-size:15.5px;color:var(--ink);}
 .co-card .flag{font-size:12px;color:var(--ink-soft);}
@@ -292,24 +298,24 @@ footer{padding:36px 0 60px;font-size:12.5px;color:var(--ink-soft);text-align:cen
 <header class="hero">
   <div class="wrap">
     <div class="hero-kicker">獨立研究筆記 · 低空經濟 / eVTOL</div>
-    <h1>松山讓出的,不只是一塊地,<br>還有頭頂上<em>那片天</em>。</h1>
-    <p class="hero-dek">所有人都在爭論三百公頃的地要怎麼分,一則臉書貼文卻把戰場搬到了天上——那裡,可能才是台北下一個二十年真正稀缺的東西。這篇筆記整理「空中計程車」提案的來龍去脈、全球進度,以及它與松山機場遷建爭議之間,那段被忽略的時間差。</p>
+    <h1>天空,正在變成<br>下一條<em>街道</em>。</h1>
+    <p class="hero-dek">從直升機的噪音與高價,到今天強調安靜、親民的垂直起降航空器——「空中計程車」不再只是科幻電影裡的畫面。這篇筆記梳理eVTOL這項技術的原理、全球十多家業者各自卡在哪一關,以及它距離真正走進日常生活,還有多遠。</p>
     <div class="hero-meta">
-      <span>依據:<b>風傳媒報導</b>(2026/10/19) 整理之獨立研究,非官方政策文件</span>
-      <span>關聯專案:<a href="https://maskywg.github.io/songshan-airport-assessment/" target="_blank" rel="noopener">松山機場遷建可行性評估 →</a></span>
+      <span>整理時間:<b>2026年10月</b> · 依公開報導與業者公告整理之獨立研究</span>
+      <span>涵蓋範圍:美國、日本、中國大陸、台灣</span>
+      <span>話題契機:近期國內機場遷建的討論,意外帶出「低空空域」這個長期被忽略的資源,讓eVTOL這項技術重新被注意到</span>
     </div>
   </div>
 </header>
 
 <nav class="toc">
   <div class="wrap">
-    <a href="#post">貼文</a>
     <a href="#evtol">空中計程車是什麼</a>
     <a href="#world">世界進度表</a>
     <a href="#companies">業者進度</a>
     <a href="#calc">飛行試算</a>
-    <a href="#sites">起降場藍圖</a>
-    <a href="#walls">三道牆</a>
+    <a href="#sites">起降場需求</a>
+    <a href="#walls">現實挑戰</a>
     <a href="#taiwan">台灣走到哪</a>
     <a href="#verdict">結論</a>
     <a href="#refs">來源</a>
@@ -318,90 +324,78 @@ footer{padding:36px 0 60px;font-size:12.5px;color:var(--ink-soft);text-align:cen
 
 <main>
 
-<section id="post">
+<section id="evtol">
   <div class="narrow">
-    <div class="eyebrow">01 · 起點</div>
-    <h2 class="title">一則臉書貼文,掀開的新戰場</h2>
-    <p class="lead">2026年10月8日,台北市長蔣萬安提出松山機場遷建構想,原址約三百公頃土地規劃打造AI產業園區、住宅與公園<sup><a href="#ref1">1</a></sup>。輿論迅速聚焦在「地要怎麼分」——AI園區多大、住宅多少、公園留多少。</p>
-    <p>但前政務委員張景森在臉書發表的評論,把問題拉到了另一個維度。他主張,松山機場真正限制台北發展的,不是跑道佔用的土地,而是機場飛航管制空域,長年佔住了台北市最珍貴、也最稀缺的「低空」資源——他估算這塊受限空域約涵蓋213公頃<sup><a href="#ref1">1</a></sup>,與蔣萬安提出的300公頃土地數字並非同一件事,但常被放在一起討論。</p>
-    <div class="quote">
-      松機的航道與飛航管制空域,占用了台北最重要的低空空間,將成為未來低空航路與營運容量的最大限制。
-      <cite>——張景森,臉書貼文,經風傳媒報導(2026/10/19)<sup><a href="#ref1">1</a></sup></cite>
-    </div>
-    <p>換句話說:這篇貼文的核心論點,不是「要不要遷機場」,而是——即使機場的去留懸而未決,台北都該現在就開始規劃屬於自己的低空空域,否則會錯過一個正在全球快速成形的產業窗口。</p>
-  </div>
-</section>
-
-<section class="alt" id="evtol">
-  <div class="narrow">
-    <div class="eyebrow">02 · 技術解析</div>
+    <div class="eyebrow">01 · 技術解析</div>
     <h2 class="title">「空中計程車」,到底是什麼?</h2>
-    <p>張景森所說的空中計程車,指的是<b>eVTOL</b>(electric Vertical Take-Off and Landing,電動垂直起降航空器)。它的賣點很直接:像直升機一樣垂直起降,不需要長跑道,但用多組電動旋翼取代傳統引擎,理論上更安靜、更便宜、維護成本更低,適合在城市裡做短程、點對點的接駁。</p>
+    <p class="lead">業界所說的空中計程車,指的是<b>eVTOL</b>(electric Vertical Take-Off and Landing,電動垂直起降航空器)。它的賣點很直接:像直升機一樣垂直起降,不需要長跑道,但用多組電動旋翼取代傳統引擎,理論上更安靜、更便宜、維護成本更低,適合在城市裡做短程、點對點的接駁。</p>
 
     <div class="grid cols-2">
       <div class="card">
         <span class="num">案例 · 美國</span>
         <h3>Joby Aviation</h3>
-        <p>目前全球進度最靠前的業者之一。2021年商業計畫曾估算,量產後單機製造成本約130萬美元(約新台幣4,000多萬元)<sup><a href="#ref1">1</a></sup>——但這是製造成本,不是乘客票價,文章特別強調不能直接換算成「搭一次要多少錢」。</p>
+        <p>目前全球進度最靠前的業者之一。2021年向美國證管會申報的上市文件中,曾揭露量產規模下單機成本估計落在百萬美元級距(約新台幣數千萬元)區間<sup><a href="#ref1">1</a></sup>——這是製造成本,不是乘客票價,早期估算也隨後續量產規劃多次調整,不能直接換算成「搭一次要多少錢」。</p>
       </div>
       <div class="card">
         <span class="num">2026年現況</span>
         <h3>卡在認證的最後一哩</h3>
-        <p>截至2026年第二季,Joby在美國FAA的五階段機型認證中,第四階段完成度約75%,目標在德州於9月展開eIPP試飛,並仍以2026年內載到第一批付費乘客為目標<sup><a href="#ref2">2</a></sup><sup><a href="#ref3">3</a></sup>。2025年已累積超過600次試飛,但第二季虧損達2.45億美元,研發支出就花了1.95億美元<sup><a href="#ref2">2</a></sup>。</p>
+        <p>截至2026年第二季,Joby在美國FAA的五階段機型認證中,第四階段完成度約75%,目標在德州於9月展開eIPP試飛,並仍以2026年內載到第一批付費乘客為目標<sup><a href="#ref2">2</a></sup><sup><a href="#ref3">3</a></sup>。2025年已累積超過600次試飛,年產能規劃也從12架上修到24架<sup><a href="#ref2">2</a></sup><sup><a href="#ref4">4</a></sup>,但第二季虧損達2.45億美元,研發支出就花了1.95億美元<sup><a href="#ref2">2</a></sup>。</p>
       </div>
     </div>
     <p class="calc-note">也就是說:即便是進度最快的業者,2026年仍是「準備載客」而非「已經載客」的階段。技術可行,商業化的時間表卻一直在往後滑。</p>
   </div>
 </section>
 
-<section id="world">
+<section class="alt" id="world">
   <div class="wrap">
-    <div class="eyebrow">03 · 國際對照</div>
+    <div class="eyebrow">02 · 國際對照</div>
     <h2 class="title">世界進度表:誰先飛,誰還在等牌照</h2>
-    <p class="lead">張景森的貼文提到美國、日本、歐洲、中國大陸都在推進類似計畫。把時間軸攤開來看,會發現「進度不一」這句話背後,差距其實不小。</p>
+    <p class="lead">把目光放到全球,會發現「進度不一」這四個字背後,差距其實不小。</p>
 
     <div class="timeline">
       <div class="tl-row">
         <div class="tl-flag">美國<small>FAA</small></div>
         <div class="tl-body">
           <span class="status mid">認證收尾</span>
-          <p>FAA推動「Innovate28」計畫,目標在2028年前建立先進空中交通的初期營運能力<sup><a href="#ref1">1</a></sup>。Joby已完成多數機型認證階段,目標2026年內首批載客,但尚未實現;已持有Part 135營運許可(傳統機型)<sup><a href="#ref2">2</a></sup><sup><a href="#ref3">3</a></sup>。</p>
+          <p>FAA推動「Innovate28」計畫,目標在2028年洛杉磯奧運前,於美國至少一個地區建立規模化的先進空中交通營運能力<sup><a href="#ref5">5</a></sup>。Joby已完成多數機型認證階段,目標2026年內首批載客,但尚未實現;已持有Part 135營運許可(傳統機型)<sup><a href="#ref2">2</a></sup><sup><a href="#ref3">3</a></sup>。</p>
         </div>
       </div>
       <div class="tl-row">
         <div class="tl-flag">日本<small>大阪關西</small></div>
         <div class="tl-body">
           <span class="status mid">試飛階段</span>
-          <p>2026年3月修訂「空中移動革命路線圖」,規劃2027年起在部分地區商業運航<sup><a href="#ref1">1</a></sup>。JAL與住友商事合資的Soracle,2025年9月已與大阪府市簽署合作協議,三方瞄準2027年內啟動商業運航,初期以大阪灣路線為主<sup><a href="#ref6">6</a></sup>。2025年大阪關西萬博期間,ANA、JAL、丸紅、SkyDrive四組業者已獲選為會場接駁運營商,作為正式商轉前的過渡<sup><a href="#ref7">7</a></sup>。</p>
+          <p>國土交通省與經濟產業省2026年3月27日召開的官民協議會上,將「空飛ぶクルマ」的國內商用運航目標期程修訂為2027至2028年,先從部分地區開始;2030年代前半則規劃建立對應的空域交通管理制度與遠端操控載客服務<sup><a href="#ref6">6</a></sup>。JAL與住友商事合資的Soracle,2025年9月已與大阪府市簽署合作協議,瞄準2027年內啟動商業運航,初期以大阪灣路線為主<sup><a href="#ref7">7</a></sup>;另一業者Vertical Aerospace則與丸紅合作,規劃2026年在大阪灣進行有人eVTOL示範飛行<sup><a href="#ref8">8</a></sup>。2025年大阪關西萬博期間,ANA、JAL、丸紅、SkyDrive四組業者已獲選為會場接駁運營商,作為正式商轉前的過渡<sup><a href="#ref9">9</a></sup>。</p>
         </div>
       </div>
       <div class="tl-row">
         <div class="tl-flag">中國大陸<small>億航 / 沃蘭特</small></div>
         <div class="tl-body">
           <span class="status stall">取證後延宕</span>
-          <p>億航EH216-S已取得營運合格證,2026年第一季原規劃3月開放售票觀光飛行<sup><a href="#ref9">9</a></sup>,但第二季一起有人輕航機事故,使監管機關轉趨保守,合肥的載客商轉審批延後,公司因此撤回全年營收指引<sup><a href="#ref10">10</a></sup>;廣州已開始點對點試營運,海外則轉向泰國曼谷、普吉、蘇美島、芭達雅布局,目標年底取得正式商轉證<sup><a href="#ref10">10</a></sup>。另一業者上海沃蘭特航空,爭取2026年取證,估算5分鐘可飛20公里,單次成本約人民幣60元,已接近計程車價格,並已累積700餘架意向訂單<sup><a href="#ref12">12</a></sup>。</p>
+          <p>億航EH216-S已取得營運合格證,2026年第一季原規劃3月開放售票觀光飛行,但第二季一起有人輕航機事故,使監管機關轉趨保守,合肥的載客商轉審批延後,公司因此撤回全年營收指引;廣州已開始點對點試營運,海外則轉向泰國曼谷、普吉、蘇美島、芭達雅布局,目標年底取得正式商轉證<sup><a href="#ref10">10</a></sup>。另一業者上海沃蘭特航空,爭取2026年取證,估算5分鐘可飛20公里,單次成本約人民幣60元,已接近計程車價格,並已累積700餘架意向訂單<sup><a href="#ref11">11</a></sup>。</p>
         </div>
       </div>
       <div class="tl-row">
         <div class="tl-flag">台灣<small>澎湖試點</small></div>
         <div class="tl-body">
           <span class="status early">規劃起步</span>
-          <p>目前沒有政府正式發布的空中計程車或低空經濟政策文件。最具體的進展,是日商SkyDrive與台灣無人機公司7A Drones、工研院三方合作,規劃2028年在澎湖啟動緊急醫療運輸,首條航線擬連接馬公市與虎井嶼<sup><a href="#ref9">9</a></sup>。</p>
+          <p>目前沒有政府正式發布的空中計程車或低空經濟政策文件。最具體的進展,是日商SkyDrive與台灣無人機公司7A Drones、工研院三方合作,規劃2028年在澎湖啟動緊急醫療運輸,首條航線擬連接馬公市與虎井嶼<sup><a href="#ref12">12</a></sup>。</p>
         </div>
       </div>
     </div>
-    <p class="calc-note">把這張表放在一起看,會發現一件事:沒有一個地方的eVTOL已經「正常載客運營」。進度最快的美國、中國大陸業者都還卡在認證或監管收緊的關卡上。這正是張景森論點裡最容易被忽略的前提——他談的是一個尚未成熟、仍在高速變動中的產業。</p>
+    <p class="calc-note">把這張表放在一起看,會發現一件事:截至2026年,沒有一個地方的eVTOL已經「正常載客運營」。進度最快的美國、中國大陸業者都還卡在認證或監管收緊的關卡上——這是一個仍在高速變動、尚未定型的產業。</p>
   </div>
 </section>
 
-<section class="alt" id="companies">
+<section id="companies">
   <div class="wrap">
-    <div class="eyebrow">04 · 業者名單</div>
+    <div class="eyebrow">03 · 業者名單</div>
     <h2 class="title">各家業者,飛到哪了?</h2>
     <p class="lead">把鏡頭拉近一點,看看撐起上面那張時間表的,究竟是哪些公司——以及它們各自卡在哪一關。這個產業燒錢速度極快,兩家歐洲先驅甚至已經在這一兩年內倒下。</p>
 
     <div class="co-grid">
       <div class="co-card">
+        <div class="co-photo"><img src="images/joby-s4.jpg" alt="Joby Aviation S4 實驗型eVTOL,攝於Edwards空軍基地" loading="lazy"></div>
+        <div class="credit">攝影:Harlan Huntington / 美國空軍,公共領域 · <a href="https://commons.wikimedia.org/wiki/File:Joby_Aviation_S4_experimental_eVTOL_aircraft_at_Edwards_AFB.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></div>
         <div class="co-top"><h3>Joby Aviation</h3><span class="status mid">認證收尾</span></div>
         <span class="flag">美國</span>
         <p>FAA五階段機型認證中,第四階段完成度約75%,目標2026年內載客,2025年已累積600+次試飛,但Q2虧損2.45億美元<sup><a href="#ref2">2</a></sup><sup><a href="#ref3">3</a></sup>。</p>
@@ -419,19 +413,25 @@ footer{padding:36px 0 60px;font-size:12.5px;color:var(--ink-soft);text-align:cen
       <div class="co-card">
         <div class="co-top"><h3>Vertical Aerospace</h3><span class="status early">試飛階段</span></div>
         <span class="flag">英國</span>
-        <p>VX4機型已完成首階段有人試飛(20次),蒐集性能資料;與日本丸紅合作,規劃在大阪灣進行有人eVTOL示範飛行,目標年份為2026年<sup><a href="#ref6">6</a></sup>。公開資訊有限,最新認證進度尚待官方公告確認。</p>
+        <p>VX4機型已完成首階段有人試飛(20次),蒐集性能資料<sup><a href="#ref14">14</a></sup>;並與日本丸紅合作,規劃在大阪灣進行有人eVTOL示範飛行,目標年份為2026年<sup><a href="#ref8">8</a></sup>。公開資訊有限,最新認證進度尚待官方公告確認。</p>
       </div>
       <div class="co-card">
+        <div class="co-photo"><img src="images/lilium-jet.jpg" alt="Lilium Jet 靜態展示機,攝於EBACE 2023航展" loading="lazy"></div>
+        <div class="credit">攝影:Matti Blume,CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Lilium,_EBACE_2023,_Le_Grand-Saconnex_(EB237483).jpg" target="_blank" rel="noopener">Wikimedia Commons</a></div>
         <div class="co-top"><h3>Lilium</h3><span class="status halt">聲請破產</span></div>
         <span class="flag">德國</span>
         <p>歐洲最早的eVTOL先驅之一,2024年10月首次聲請破產,募資案一度出現逾2億歐元的拯救方案,但2025年2月21日二度聲請破產,裁員逾千人,營運停止<sup><a href="#ref15">15</a></sup>。</p>
       </div>
       <div class="co-card">
+        <div class="co-photo"><img src="images/volocopter-2x.jpg" alt="Volocopter 2X,攝於2017年法蘭克福IAA車展" loading="lazy"></div>
+        <div class="credit">攝影:Matti Blume,CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Volocopter,IAA_2017,_Frankfurt_(1Y7A1911).jpg" target="_blank" rel="noopener">Wikimedia Commons</a></div>
         <div class="co-top"><h3>Volocopter</h3><span class="status halt">聲請破產</span></div>
         <span class="flag">德國</span>
         <p>同為德國eVTOL代表業者,2024年12月26日向卡爾斯魯厄地方法院聲請破產,進入臨時破產管理程序,管理人持續尋找新投資人,後續結果尚待追蹤<sup><a href="#ref16">16</a></sup>。</p>
       </div>
       <div class="co-card">
+        <div class="co-photo"><img src="images/ehang-216.jpg" alt="EHang 216 載人無人機,西班牙國家警察展示機" loading="lazy"></div>
+        <div class="credit">攝影:CarlosVdeHabsburgo,CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Ehang_216.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></div>
         <div class="co-top"><h3>億航 EHang</h3><span class="status stall">取證後延宕</span></div>
         <span class="flag">中國大陸</span>
         <p>EH216-S已取得營運合格證,但2026年Q2一起有人輕航機事故使監管轉趨保守,合肥載客商轉延後,公司已撤回全年營收指引,轉而加速布局泰國市場<sup><a href="#ref10">10</a></sup>。</p>
@@ -439,9 +439,11 @@ footer{padding:36px 0 60px;font-size:12.5px;color:var(--ink-soft);text-align:cen
       <div class="co-card">
         <div class="co-top"><h3>上海沃蘭特航空</h3><span class="status mid">爭取取證</span></div>
         <span class="flag">中國大陸</span>
-        <p>VE25機型,爭取2026年取證,估算5分鐘可飛20公里、單次成本約人民幣60元,已接近計程車價格,累積700餘架意向訂單<sup><a href="#ref12">12</a></sup>。</p>
+        <p>VE25機型,爭取2026年取證,估算5分鐘可飛20公里、單次成本約人民幣60元,已接近計程車價格,累積700餘架意向訂單<sup><a href="#ref11">11</a></sup>。</p>
       </div>
       <div class="co-card">
+        <div class="co-photo"><img src="images/xpeng-x2.jpg" alt="小鵬匯天 X2 eVTOL,攝於2023年廣州車展" loading="lazy"></div>
+        <div class="credit">攝影:Tim Wu,CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:XPeng_X2_at_Auto_Guangzhou_2023_20231126-A.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></div>
         <div class="co-top"><h3>小鵬匯天 XPeng AeroHT</h3><span class="status mid">籌備量產</span></div>
         <span class="flag">中國大陸</span>
         <p>分體式飛行汽車「陸地航母」:雙人eVTOL飛行器搭配六輪地面載具充電收納,目標2026年下半年開始交付,已獲超過5,000筆訂單,廣州新廠已動工,曾取得CAAC南部管理局適航認證<sup><a href="#ref17">17</a></sup>。</p>
@@ -449,18 +451,23 @@ footer{padding:36px 0 60px;font-size:12.5px;color:var(--ink-soft);text-align:cen
       <div class="co-card">
         <div class="co-top"><h3>SkyDrive</h3><span class="status early">離島醫療試點</span></div>
         <span class="flag">日本</span>
-        <p>2025年獲選為大阪關西萬博會場接駁運營商之一;同時與台灣7A Drones、工研院合作,規劃2028年在澎湖啟動eVTOL緊急醫療運輸<sup><a href="#ref7">7</a></sup><sup><a href="#ref9">9</a></sup>。</p>
+        <p>2025年獲選為大阪關西萬博會場接駁運營商之一;同時與台灣7A Drones、工研院合作,規劃2028年在澎湖啟動eVTOL緊急醫療運輸<sup><a href="#ref9">9</a></sup><sup><a href="#ref12">12</a></sup>。</p>
       </div>
     </div>
     <p class="calc-note">把這張名單放在一起看,會發現這個產業有兩個同時存在的事實:一邊是Archer拿到全球首張「限制型別適航證」路徑、中國業者衝刺量產交付;另一邊是兩家德國先驅在一年內先後倒下。技術方向確定,但商業模式與資金链能不能撐到載客運營那一天,仍是最大的未知數。</p>
+
+    <div class="callout rust">
+      <b class="tag">題外:「飛行特斯拉」算嗎?</b>
+      2026年10月15至16日,Elon Musk在SpaceX德州測試場發表了一款號稱能飛的Tesla Roadster:現場展示它用噴氣裝置爬坡、翻轉、再降落,但沒有持續飛行的展示,也沒有獨立單位驗證<sup><a href="#ref18">18</a></sup>。嚴格來說,它跟本頁介紹的eVTOL不是同一類東西——沒有多旋翼垂直升力系統,靠的是SpaceX提供的噴氣推進器做短程噴射與跳躍,比較接近「會噴氣的跑車」而非載客飛行器。Musk表示量產目標是2028年,但特斯拉過去的時程承諾常常延後,目前也沒有公布售價。
+    </div>
   </div>
 </section>
 
-<section id="calc">
+<section class="alt" id="calc">
   <div class="wrap">
-    <div class="eyebrow">05 · 親自算一次</div>
+    <div class="eyebrow">04 · 親自算一次</div>
     <h2 class="title">天上比地上,快多少?</h2>
-    <p class="lead">貼文裡舉了一個例子:桃園機場到北士科(輝達台灣總部所在地)直線距離約28公里。若空中計程車以平均時速180公里飛行,約9分鐘可達;相對地,若在松山機場降落再轉乘地面交通,最後8.8公里的尖峰車程約需26分鐘<sup><a href="#ref1">1</a></sup>。拉動下面的滑桿,套用不同的距離與速度,看看差距會怎麼變化——但別忘了,這個數字沒有把起降排隊、轉乘、航管調度與天候因素算進去。</p>
+    <p class="lead">用一個假設情境感受這個產業想解決的問題:郊區機場到市中心商務區,直線距離28公里。若空中計程車以平均時速180公里飛行,約9分鐘可達;相對地,若改採地面接駁,最後8.8公里的尖峰車程約需26分鐘。這只是用來說明概念的示意數字,拉動下面的滑桿,套用不同的距離與速度,看看差距會怎麼變化——但別忘了,這組數字沒有把起降排隊、轉乘、航管調度與天候因素算進去。</p>
 
     <div class="calc-box">
       <div class="calc-row">
@@ -488,7 +495,7 @@ footer{padding:36px 0 60px;font-size:12.5px;color:var(--ink-soft);text-align:cen
         </div>
         <div class="res ground">
           <div class="big" id="groundTime">26.4 分</div>
-          <div class="lbl">降落松機後<br>地面接續車程</div>
+          <div class="lbl">地面轉乘<br>接續車程</div>
         </div>
       </div>
       <p class="calc-note">試算方式:飛行時間 = 直線距離 ÷ 空中計程車時速;地面時間 = 地面接續路程 ÷ 尖峰時段均速。兩者都只計算「移動中」的時間,實際還要加上候機、起降排隊、安檢與轉乘等候等環節——這些隱藏成本,才是eVTOL能否真正比開車快的關鍵。</p>
@@ -496,38 +503,37 @@ footer{padding:36px 0 60px;font-size:12.5px;color:var(--ink-soft);text-align:cen
   </div>
 </section>
 
-<section class="alt" id="sites">
+<section id="sites">
   <div class="wrap">
-    <div class="eyebrow">06 · 藍圖</div>
-    <h2 class="title">張景森的起降場清單</h2>
-    <p class="lead">貼文裡具體點名了幾類場所,認為可以研究設置或共用合法的空中計程車起降場(vertiport)<sup><a href="#ref1">1</a></sup>:</p>
+    <div class="eyebrow">05 · 藍圖</div>
+    <h2 class="title">一套低空接駁網絡,需要什麼?</h2>
+    <p class="lead">不只是飛機,eVTOL要真正普及,背後需要一整套地面基礎建設與空域規劃。國際上常被提到的幾類場景:</p>
     <ul class="site-list">
-      <li><span class="dot">商</span><div><b>北士科(北投士林科技園區)</b><span>輝達(NVIDIA)台灣總部所在地,是文中試算範例的目的地,也是未來低空接駁需求最具體的商務場景。</span></div></li>
-      <li><span class="dot">商</span><div><b>內湖科技園區</b><span>台北既有的科技/軟體業聚落,長年受塞車困擾之苦的區域之一。</span></div></li>
-      <li><span class="dot">商</span><div><b>南港</b><span>軌道與展覽、研發機能並存的區域,鄰近南港車站轉乘節點。</span></div></li>
-      <li><span class="dot">政</span><div><b>總統府、行政院、國防部</b><span>政府核心機關,屬於目前飛航管制最嚴格的區域,若納入討論,代表這套構想必須正面處理國安與禁航空域的既有規則。</span></div></li>
-      <li><span class="dot">醫</span><div><b>醫學中心</b><span>呼應低空經濟裡「緊急醫療後送」的應用場景,而非單純的商務接駁。</span></div></li>
+      <li><span class="dot">商</span><div><b>商業 / 科技園區</b><span>企業總部與產業聚落聚集的區域,是短程商務通勤需求最具體的場景。</span></div></li>
+      <li><span class="dot">轉</span><div><b>交通轉運節點</b><span>鄰近車站、機場的轉乘樞紐,可以讓空中與地面運輸系統彼此銜接。</span></div></li>
+      <li><span class="dot">管</span><div><b>政府與高安全管制區域</b><span>許多城市的政府機關、軍事設施周邊,本就是禁航或限航區域,這類場域若要納入低空規劃,必須先處理既有的空域管制規則。</span></div></li>
+      <li><span class="dot">醫</span><div><b>醫療院所</b><span>呼應低空經濟裡「緊急醫療後送」的應用場景,而非單純的商務接駁。</span></div></li>
     </ul>
     <div class="callout gold">
       <b class="tag">不只載人</b>
-      張景森的貼文也把討論範圍拉得更寬:低空經濟不只是空中計程車,還包括無人機物流、緊急醫療後送、救災與設施巡檢。這些應用共用同一套底層需求——起降場、充電設施、航路規劃、通訊導航系統,以及對應的法規<sup><a href="#ref1">1</a></sup>。
+      低空經濟不只是空中計程車,也包括無人機物流、緊急醫療後送、救災與設施巡檢。這些應用共用同一套底層需求——起降場、充電設施、航路規劃、通訊導航系統,以及對應的法規。
     </div>
   </div>
 </section>
 
-<section id="walls">
+<section class="alt" id="walls">
   <div class="wrap">
-    <div class="eyebrow">07 · 現實</div>
+    <div class="eyebrow">06 · 現實</div>
     <h2 class="title">擋在路上的,是三道牆</h2>
-    <p class="lead">貼文本身也坦承,這套構想要落地,還有幾個繞不開的問題——只是他認為,這些都該透過「重新規劃空域」來處理,而不是拿來當作停止討論的理由<sup><a href="#ref1">1</a></sup>。</p>
+    <p class="lead">這套構想要落地,還有幾個繞不開的問題。</p>
     <div class="wall-grid">
       <div class="wall">
         <h3>國家安全</h3>
-        <p>總統府、行政院、國防部周邊本就是高敏感度的禁航或限航區域,任何低空載人載具的規劃,都必須先取得國安系統的同意與配套。</p>
+        <p>許多城市的政府機關、軍事設施周邊,本就是高敏感度的禁航或限航區域,低空載人載具的規劃,必須先取得相關單位的同意與配套。</p>
       </div>
       <div class="wall">
-        <h3>軍事限航</h3>
-        <p>台北及周邊空域本就疊加大量軍事管制區塊,這是台灣相較於其他城市更特殊的限制條件,也是文中僅點出問題、未提出具體解方的部分。</p>
+        <h3>既有空域管制</h3>
+        <p>部分區域空域本就疊加大量既有管制(軍事、機場、禁限航區),如何在這些既有限制中挪出一條新的低空航路,是許多城市共同面對的難題。</p>
       </div>
       <div class="wall">
         <h3>飛航安全與噪音</h3>
@@ -537,45 +543,44 @@ footer{padding:36px 0 60px;font-size:12.5px;color:var(--ink-soft);text-align:cen
   </div>
 </section>
 
-<section class="alt" id="taiwan">
+<section id="taiwan">
   <div class="narrow">
-    <div class="eyebrow">08 · 台灣現況</div>
+    <div class="eyebrow">07 · 台灣現況</div>
     <h2 class="title">台灣,目前走到哪一步?</h2>
-    <p>相較於文中提到的各國進度,台灣目前唯一具體落地的計畫,其實不在台北,而是在澎湖。日商SkyDrive與台灣無人機公司7A Drones、工研院三方結盟,正把一項eVTOL緊急醫療運輸計畫,從可行性研究推進到籌備階段<sup><a href="#ref9">9</a></sup>。</p>
+    <p>相較於前面提到的各國進度,台灣目前唯一具體落地的計畫,其實不在都會區,而是在澎湖。日商SkyDrive與台灣無人機公司7A Drones、工研院三方結盟,正把一項eVTOL緊急醫療運輸計畫,從可行性研究推進到籌備階段<sup><a href="#ref12">12</a></sup>。</p>
     <div class="grid cols-2">
       <div class="card">
         <span class="num">航線規劃</span>
         <h3>馬公市 ↔ 虎井嶼</h3>
-        <p>三方將先從這條離島航線著手,再評估澎湖群島其他潛在航線,目標是2028年啟動緊急醫療運輸<sup><a href="#ref9">9</a></sup>。</p>
+        <p>三方將先從這條離島航線著手,再評估澎湖群島其他潛在航線,目標是2028年啟動緊急醫療運輸<sup><a href="#ref12">12</a></sup>。</p>
       </div>
       <div class="card">
         <span class="num">採購與基礎建設</span>
         <h3>10架意向訂單</h3>
-        <p>7A Drones已預訂最多十架SkyDrive機型,工作項目包括永久垂直起降場選址、臨時緊急降落點、充電設施,以及支援營運的空域管理系統<sup><a href="#ref9">9</a></sup>。</p>
+        <p>7A Drones已預訂最多十架SkyDrive機型,工作項目包括永久垂直起降場選址、臨時緊急降落點、充電設施,以及支援營運的空域管理系統<sup><a href="#ref12">12</a></sup>。</p>
       </div>
     </div>
-    <p>換句話說:台灣目前真正往前推進的案例,場景是「離島醫療」,不是「城市通勤」。張景森貼文裡描繪的台北低空接駁網絡,目前仍停留在個人倡議階段,沒有找到對應的政府研究或預算規劃。</p>
+    <p>換句話說:台灣目前真正往前推進的案例,場景是「離島醫療」,不是「城市通勤」——這也與多數國家的eVTOL發展路徑相似:從低密度、高急迫性的場景切入,再逐步擴大到都會區的日常運輸。</p>
   </div>
 </section>
 
-<section id="verdict">
+<section class="alt" id="verdict">
   <div class="wrap">
-    <div class="eyebrow">09 · 結論</div>
-    <h2 class="title">這跟松機遷建,到底有沒有關係?</h2>
-    <p class="lead">把所有線索放在一起,會看到一段容易被忽略的時間差。</p>
+    <div class="eyebrow">08 · 結論</div>
+    <h2 class="title">從示範飛行,到日常交通,還差多遠?</h2>
     <div class="callout">
-      <b class="tag">時間軸錯位</b>
-      松山機場即使確定遷建,最快也要到2033年以後才可能真正空出來<sup><a href="#ref1">1</a></sup>。而全球eVTOL產業,2026年才剛要從「試飛」走向「初期商轉」——Joby還在等FAA最後一哩認證,億航遇上監管轉趨保守而延宕,日本的商業運航目標設在2027年。等松機真正空出跑道的那一天,低空載具產業的格局,很可能早已經洗牌過好幾輪。
+      <b class="tag">高速成長,尚未定型</b>
+      把這些線索放在一起,會看到一個高速成長卻尚未定型的產業:Archer拿到全球首張「限制型別適航證」路徑、中國業者衝刺量產交付、日本官方把商用運航目標寫進2027至2028年的官方路線圖——但同時,兩家德國eVTOL先驅卻在一年內先後倒下,凸顯這個產業燒錢速度之快,資金链能不能撐到載客運營那一天,仍是最大未知數。
     </div>
-    <p>這正是張景森論點裡,最核心也最容易被誤讀的部分:他不是在說「松機遷建之後台北就能有空中計程車」,而是在說——<b>不管松機最終遷或不遷、什麼時候遷,台北都應該現在就開始研究自己的低空空域規劃</b>,否則等到真正需要用的時候,會發現這塊空域的使用規則、技術標準、甚至市場位置,早就被別人定義好了。</p>
-    <p>但這個論點目前仍停留在一篇臉書貼文與媒體報導的層次。它沒有附帶可行性研究、沒有預算規劃,也沒有看到交通部或台北市政府的正式回應。文中引用的9分鐘飛行試算,也只是示意性的理想值,沒有算進起降排隊、轉乘等候與空域調度——這些往往才是決定一套低空接駁系統能不能真的比開車快的關鍵。換句話說,這是一個值得認真研究的方向,但距離「可以動工的計畫」,還有不小的距離。</p>
+    <p>技術方向大致底定:多旋翼、電動、垂直起降,幾乎是所有業者的共同選擇。但真正決定這個產業能不能成為日常交通工具的,其實是三件事——<b>認證速度</b>(能不能拿到型別適航證)、<b>基礎建設</b>(起降場、充電、空域管理有沒有到位),以及最現實的<b>成本</b>(票價能不能真的貼近計程車,而不是停留在「包機」等級)。</p>
+    <p>目前看來,2026到2028年會是一個關鍵的分水嶺:美國、日本、阿聯酋都把這段期間設定為從「試飛」走向「初期商轉」的窗口;中國大陸的案例則顯示,就算拿到合格證,監管態度也可能隨著任何一起意外事故而迅速轉向保守。空中計程車會不會在這個十年內真正走進日常生活,答案可能不在技術本身,而在於這些認證與法規的賽跑,誰先跑到終點。</p>
   </div>
 </section>
 
 <div class="closing">
   <div class="wrap">
-    <div class="quote2">地上的三百公頃,看得到、量得出、吵得清楚。頭上那片天,卻要等一則貼文,才有人想起它也在被使用——而且正在被重新定義。</div>
-    <p class="sub">本頁為依據公開報導整理的獨立研究筆記,觀點歸屬原發言者與原始報導,非官方政策文件。</p>
+    <div class="quote2">直升機飛了快一百年,卻始終只屬於少數人的天空。這一次,電動與自動化的技術,會不會讓天空,第一次真正對所有人打開?</div>
+    <p class="sub">本頁為依據公開報導整理的獨立研究筆記,資訊時效至2026年10月。技術與法規進度變動快速,請以各業者與主管機關最新公告為準。</p>
   </div>
 </div>
 
@@ -583,21 +588,24 @@ footer{padding:36px 0 60px;font-size:12.5px;color:var(--ink-soft);text-align:cen
   <div class="narrow refs">
     <h2 class="title" style="font-size:20px;">參考來源</h2>
     <ol>
-      <li id="ref1">張大任,〈松機遷建的視野之爭:張景森談低空經濟與空中計程車〉,《風傳媒》,2026/10/19。<a href="https://www.storm.mg/article/11173731" target="_blank" rel="noopener">storm.mg/article/11173731</a></li>
+      <li id="ref1">Joby Aviation Inc., Form S-1 (2021), U.S. SEC EDGAR;另見二手分析 Risk Premium Research,〈Joby Valuation〉。<a href="https://www.sec.gov/Archives/edgar/data/1819848/000119312521313516/d234001ds1.htm" target="_blank" rel="noopener">sec.gov</a> / <a href="https://riskpremiumresearch.substack.com/p/joby-valuation" target="_blank" rel="noopener">riskpremiumresearch.substack.com</a></li>
       <li id="ref2">Kavout Market Lens,〈Joby Aviation's Sky-High Ambition: Can Certification and Scale Justify a 10x Leap?〉。<a href="https://www.kavout.com/market-lens/joby-aviation-s-sky-high-ambition-can-certification-and-scale-justify-a-10x-leap" target="_blank" rel="noopener">kavout.com</a></li>
       <li id="ref3">Transport Topics,〈Joby Targets 2026 US Air Taxi Launch〉。<a href="https://www.ttnews.com/articles/joby-targets-2026-us-launch" target="_blank" rel="noopener">ttnews.com</a></li>
-      <li id="ref4">Gulf News,〈Air taxi maker Joby Aviation enters final stages of FAA certification ahead of Dubai launch〉。<a href="https://gulfnews.com/business/aviation/air-taxi-maker-joby-aviation-enters-final-stages-of-faa-certification-ahead-of-dubai-launch-1.500337553" target="_blank" rel="noopener">gulfnews.com</a></li>
-      <li id="ref5">Nasdaq,〈Is JOBY Worth Buying as Commercial Progress Meets Execution Risk?〉。<a href="https://www.nasdaq.com/articles/joby-worth-buying-commercial-progress-meets-execution-risk" target="_blank" rel="noopener">nasdaq.com</a></li>
-      <li id="ref6">Aviation Wire,〈JAL・住友商事のSoracle、大阪府市と連携協定〉,2025/09/11。<a href="https://www.aviationwire.jp/archives/330503" target="_blank" rel="noopener">aviationwire.jp</a></li>
-      <li id="ref7">Travel Voice,〈Four 'Flying Car' operators in Osaka Expo are selected as a step to commercialization in Japan〉。<a href="https://travelvoice.jp/english/four-flying-car-operators-in-osaka-expo-are-selected-as-a-step-to-commercialization-in-japan" target="_blank" rel="noopener">travelvoice.jp</a>;中文報導見<a href="https://www.inside.com.tw/article/30848-flying-car-expo-2025-osaka" target="_blank" rel="noopener">inside.com.tw</a></li>
-      <li id="ref9">Air Med & Rescue,〈SkyDrive advances plans for eVTOL medical transport network in Taiwan〉。<a href="https://www.airmedandrescue.com/latest/news/skydrive-advances-plans-evtol-medical-transport-network-taiwan" target="_blank" rel="noopener">airmedandrescue.com</a></li>
+      <li id="ref4">Nasdaq,〈Is JOBY Worth Buying as Commercial Progress Meets Execution Risk?〉。<a href="https://www.nasdaq.com/articles/joby-worth-buying-commercial-progress-meets-execution-risk" target="_blank" rel="noopener">nasdaq.com</a></li>
+      <li id="ref5">FlyingMag,〈FAA Releases Its Innovate28 Plan for AAM Integration by 2028〉。<a href="https://www.flyingmag.com/faa-releases-its-innovate28-plan-for-aam-integration-by-2028/" target="_blank" rel="noopener">flyingmag.com</a></li>
+      <li id="ref6">國土交通省/經濟產業省,第12回「空の移動革命に向けた官民協議会」ロードマップ改訂(2026/3/27);Travel Voice報導。<a href="https://www.mlit.go.jp/koku/content/001994078.pdf" target="_blank" rel="noopener">mlit.go.jp</a> / <a href="https://www.travelvoice.jp/20260327-159501" target="_blank" rel="noopener">travelvoice.jp</a></li>
+      <li id="ref7">Aviation Wire,〈JAL・住友商事のSoracle、大阪府市と連携協定〉,2025/09/11。<a href="https://www.aviationwire.jp/archives/330503" target="_blank" rel="noopener">aviationwire.jp</a></li>
+      <li id="ref8">Newswitch,〈大阪湾エリアでの有人eVTOL実証飛行計画〉。<a href="https://newswitch.jp/p/35944" target="_blank" rel="noopener">newswitch.jp</a></li>
+      <li id="ref9">Travel Voice,〈Four 'Flying Car' operators in Osaka Expo are selected as a step to commercialization in Japan〉。<a href="https://travelvoice.jp/english/four-flying-car-operators-in-osaka-expo-are-selected-as-a-step-to-commercialization-in-japan" target="_blank" rel="noopener">travelvoice.jp</a>;中文報導見<a href="https://www.inside.com.tw/article/30848-flying-car-expo-2025-osaka" target="_blank" rel="noopener">inside.com.tw</a></li>
       <li id="ref10">Helihub,〈EHang reports 2026 Q1 Unaudited Financial Results〉;MarketBeat,〈Transcript: EHang Q2 2026 Earnings Call Highlights〉。<a href="https://www.helihub.com/2026/06/10/ehang-reports-first-quarter-2026-unaudited-financial-results/" target="_blank" rel="noopener">helihub.com</a> / <a href="https://www.marketbeat.com/instant-alerts/transcript-ehang-q2-earnings-call-highlights-2026-08-25/" target="_blank" rel="noopener">marketbeat.com</a></li>
-      <li id="ref12">鉅亨網,〈5分鐘飛20公里成本60元,上海「空中計程車」要來了〉。<a href="https://hao.cnyes.com/post/79610" target="_blank" rel="noopener">hao.cnyes.com</a></li>
+      <li id="ref11">鉅亨網,〈5分鐘飛20公里成本60元,上海「空中計程車」要來了〉。<a href="https://hao.cnyes.com/post/79610" target="_blank" rel="noopener">hao.cnyes.com</a></li>
+      <li id="ref12">Air Med & Rescue,〈SkyDrive advances plans for eVTOL medical transport network in Taiwan〉。<a href="https://www.airmedandrescue.com/latest/news/skydrive-advances-plans-evtol-medical-transport-network-taiwan" target="_blank" rel="noopener">airmedandrescue.com</a></li>
       <li id="ref13">Gulf News,〈Archer begins test flights in Abu Dhabi for air taxi rollout, targeting UAE commercial launch〉;Arabian Business,〈UAE to begin air taxi flights as early as 2026〉。<a href="https://gulfnews.com/business/aviation/archer-begins-test-flights-in-abu-dhabi-for-air-taxi-rollout-targeting-uae-commercial-launch-1.500185071" target="_blank" rel="noopener">gulfnews.com</a> / <a href="https://www.arabianbusiness.com/industries/transport/uae-to-begin-air-taxi-flights-as-early-as-2026-saudi-may-follow-before-2030-archer-cco" target="_blank" rel="noopener">arabianbusiness.com</a></li>
       <li id="ref14">eplaneAI,〈Five Air Taxis Poised to Shape Urban Mobility by 2026〉。<a href="https://www.eplaneai.com/news/five-air-taxis-poised-to-shape-urban-mobility-by-2026" target="_blank" rel="noopener">eplaneai.com</a></li>
       <li id="ref15">ch-aviation,〈Germany's Lilium files for final insolvency〉。<a href="https://www.ch-aviation.com/news/150719-germanys-lilium-files-for-final-insolvency" target="_blank" rel="noopener">ch-aviation.com</a></li>
       <li id="ref16">Silicon Canals,〈Volocopter files for insolvency〉。<a href="https://siliconcanals.com/volocopter-files-for-insolvency/" target="_blank" rel="noopener">siliconcanals.com</a></li>
       <li id="ref17">SCMP,〈AeroHT gears up for European flying car debut as Xpeng affiliate clocks 5,000 orders〉;CnEVPost,〈Xpeng Aeroht aims to start delivering modular flying car in 2026〉。<a href="https://www.scmp.com/business/china-business/article/3325030/aeroht-gears-european-flying-car-debut-xpeng-affiliate-clocks-5000-orders" target="_blank" rel="noopener">scmp.com</a> / <a href="https://cnevpost.com/2024/09/03/xpeng-aeroht-to-start-delivering-modular-flying-car-2026/" target="_blank" rel="noopener">cnevpost.com</a></li>
+      <li id="ref18">CTV News,〈Tesla unveils what it says is a flying car〉,2026/10。<a href="https://www.ctvnews.ca/business/autos/article/tesla-unveils-what-it-says-is-a-flying-car/" target="_blank" rel="noopener">ctvnews.ca</a></li>
     </ol>
   </div>
 </section>
@@ -605,7 +613,7 @@ footer{padding:36px 0 60px;font-size:12.5px;color:var(--ink-soft);text-align:cen
 </main>
 
 <footer>
-  整理製作:獨立研究筆記 · 2026年10月 · 延伸閱讀 <a href="https://maskywg.github.io/songshan-airport-assessment/" target="_blank" rel="noopener">松山機場遷建可行性評估</a>
+  整理製作:獨立研究筆記 · 2026年10月
 </footer>
 
 <script>
