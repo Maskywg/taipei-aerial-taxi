@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>松山讓出的,不只是一塊地——空中計程車提案研究筆記</title>
+<meta name="description" content="松山機場遷建爭論之外,一則臉書貼文把戰場搬到了天上。整理張景森的低空空域主張、Joby Aviation與億航的全球eVTOL進度、以及台灣目前走到哪裡的獨立研究筆記。">
+
+<!-- Open Graph / Twitter Card -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="松山讓出的,不只是一塊地——空中計程車提案研究筆記">
+<meta property="og:description" content="當所有人盯著地面上的三百公頃怎麼分,一則臉書貼文把戰場搬到了天上。整理空中計程車(eVTOL)的全球進度與台北的低空想像。">
+<meta property="og:image" content="https://maskywg.github.io/taipei-aerial-taxi/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://maskywg.github.io/taipei-aerial-taxi/">
+<meta property="og:locale" content="zh_TW">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="松山讓出的,不只是一塊地——空中計程車提案研究筆記">
+<meta name="twitter:description" content="當所有人盯著地面上的三百公頃怎麼分,一則臉書貼文把戰場搬到了天上。整理空中計程車(eVTOL)的全球進度與台北的低空想像。">
+<meta name="twitter:image" content="https://maskywg.github.io/taipei-aerial-taxi/og-image.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700;900&family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --sky:#2a6f8f;
+  --sky-deep:#1d4f66;
+  --sky-pale:#e7f0f3;
+  --gold:#c98a2b;
+  --gold-deep:#a66f1e;
+  --rust:#b34a3f;
+  --rust-deep:#8f3a31;
+  --green:#3f8f5f;
+  --paper:#f8f5ee;
+  --cream:#f0ede3;
+  --ink:#232620;
+  --ink-soft:#5a5f56;
+  --line:#ddd9c9;
+  --card:#ffffff;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Noto Sans TC',sans-serif;
+  line-height:1.8;
+  font-weight:400;
+}
+h1,h2,h3,.serif{font-family:'Noto Serif TC',serif;}
+a{color:var(--sky-deep);text-decoration:none;border-bottom:1px solid currentColor;}
+a:hover{color:var(--rust);}
+.wrap{max-width:860px;margin:0 auto;padding:0 24px;}
+.narrow{max-width:720px;margin:0 auto;padding:0 24px;}
+
+/* ===== Hero ===== */
+header.hero{
+  position:relative;
+  padding:96px 0 72px;
+  background:
+    radial-gradient(circle at 18% 20%, rgba(42,111,143,0.14), transparent 55%),
+    radial-gradient(circle at 85% 0%, rgba(201,138,43,0.14), transparent 50%),
+    var(--cream);
+  border-bottom:1px solid var(--line);
+  overflow:hidden;
+}
+.hero-kicker{
+  font-size:13px;
+  letter-spacing:0.14em;
+  color:var(--sky-deep);
+  font-weight:700;
+  margin-bottom:18px;
+  display:flex;align-items:center;gap:10px;
+}
+.hero-kicker::before{content:"";width:28px;height:2px;background:var(--gold);display:inline-block;}
+header.hero h1{
+  font-size:clamp(32px,5vw,50px);
+  line-height:1.35;
+  font-weight:700;
+  margin:0 0 28px;
+  color:var(--ink);
+}
+header.hero h1 em{
+  font-style:normal;
+  color:var(--sky-deep);
+  background:linear-gradient(transparent 62%, rgba(201,138,43,0.28) 62%);
+}
+.hero-dek{
+  font-size:18px;
+  color:var(--ink-soft);
+  max-width:620px;
+  margin:0 0 36px;
+}
+.hero-meta{
+  display:flex;flex-wrap:wrap;gap:10px 22px;
+  font-size:13px;color:var(--ink-soft);
+  border-top:1px solid var(--line);
+  padding-top:18px;
+}
+.hero-meta b{color:var(--ink);font-weight:600;}
+
+/* ===== Nav strip ===== */
+nav.toc{
+  background:var(--sky-deep);
+  color:#fff;
+  position:sticky;top:0;z-index:50;
+  font-size:13px;
+}
+nav.toc .wrap{display:flex;gap:4px;overflow-x:auto;padding:0 24px;scrollbar-width:none;}
+nav.toc .wrap::-webkit-scrollbar{display:none;}
+nav.toc a{
+  color:rgba(255,255,255,0.78);
+  border-bottom:none;
+  white-space:nowrap;
+  padding:13px 14px;
+  display:inline-block;
+  border-bottom:2px solid transparent;
+}
+nav.toc a:hover{color:#fff;border-bottom-color:var(--gold);}
+
+/* ===== Sections ===== */
+section{padding:64px 0;}
+section.alt{background:var(--cream);}
+.eyebrow{
+  font-size:13px;font-weight:700;letter-spacing:.1em;
+  color:var(--gold-deep);margin-bottom:10px;
+}
+h2.title{
+  font-size:clamp(24px,3.4vw,32px);
+  margin:0 0 20px;
+  color:var(--ink);
+  line-height:1.5;
+}
+p{margin:0 0 18px;color:var(--ink);}
+.lead{font-size:18px;color:var(--ink-soft);}
+sup a{font-size:11px;border-bottom:none;color:var(--sky-deep);font-weight:700;}
+
+/* callouts */
+.callout{
+  background:var(--sky-pale);
+  border-left:4px solid var(--sky);
+  border-radius:4px;
+  padding:20px 24px;
+  margin:28px 0;
+  font-size:15.5px;
+}
+.callout.gold{background:#fbf2e1;border-left-color:var(--gold);}
+.callout.rust{background:#f8e9e6;border-left-color:var(--rust);}
+.callout b.tag{
+  display:inline-block;font-size:11px;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--sky-deep);margin-bottom:6px;
+}
+.callout.gold b.tag{color:var(--gold-deep);}
+.callout.rust b.tag{color:var(--rust-deep);}
+.quote{
+  font-family:'Noto Serif TC',serif;
+  font-size:21px;line-height:1.7;
+  color:var(--sky-deep);
+  padding:4px 0 4px 22px;
+  border-left:3px solid var(--gold);
+  margin:30px 0;
+}
+.quote cite{display:block;margin-top:10px;font-size:13px;font-family:'Noto Sans TC',sans-serif;color:var(--ink-soft);font-style:normal;}
+
+/* cards grid */
+.grid{display:grid;gap:18px;margin:28px 0;}
+.grid.cols-2{grid-template-columns:repeat(2,1fr);}
+.grid.cols-3{grid-template-columns:repeat(3,1fr);}
+@media(max-width:720px){.grid.cols-2,.grid.cols-3{grid-template-columns:1fr;}}
+.card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:10px;
+  padding:22px;
+}
+.card h3{margin:0 0 10px;font-size:17px;color:var(--sky-deep);}
+.card p{font-size:14.5px;margin-bottom:0;color:var(--ink-soft);}
+.card .num{font-size:12px;color:var(--gold-deep);font-weight:700;letter-spacing:.06em;margin-bottom:8px;display:block;}
+
+/* timeline */
+.timeline{margin:32px 0;}
+.tl-row{
+  display:grid;grid-template-columns:110px 1fr;gap:18px;
+  padding:18px 0;border-top:1px solid var(--line);
+}
+.tl-row:first-child{border-top:none;}
+.tl-flag{font-weight:700;color:var(--ink);font-size:15px;}
+.tl-flag small{display:block;font-weight:400;font-size:12px;color:var(--ink-soft);margin-top:3px;}
+.tl-body p{margin-bottom:8px;font-size:14.5px;}
+.tl-body .status{
+  display:inline-block;font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:20px;margin-bottom:8px;
+}
+.status.ahead{background:#e4f3ea;color:var(--green);}
+.status.mid{background:#fbf2e1;color:var(--gold-deep);}
+.status.early{background:#f0ede3;color:var(--ink-soft);}
+.status.stall{background:#f8e9e6;color:var(--rust-deep);}
+.status.halt{background:#eceae3;color:#8a8577;text-decoration:line-through;}
+
+/* company roster */
+.co-grid{display:grid;gap:16px;margin:28px 0;grid-template-columns:repeat(3,1fr);}
+@media(max-width:860px){.co-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:560px){.co-grid{grid-template-columns:1fr;}}
+.co-card{
+  background:var(--card);border:1px solid var(--line);border-radius:10px;
+  padding:18px 20px;display:flex;flex-direction:column;gap:8px;
+}
+.co-card .co-top{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;}
+.co-card h3{margin:0;font-size:15.5px;color:var(--ink);}
+.co-card .flag{font-size:12px;color:var(--ink-soft);}
+.co-card p{font-size:13.5px;color:var(--ink-soft);margin:0;}
+
+/* comparison table */
+table.cmp{width:100%;border-collapse:collapse;margin:28px 0;font-size:14.5px;}
+table.cmp th,table.cmp td{border:1px solid var(--line);padding:12px 14px;text-align:left;vertical-align:top;}
+table.cmp th{background:var(--sky-deep);color:#fff;font-weight:600;}
+table.cmp tr:nth-child(even) td{background:#fbfaf6;}
+
+/* calculator */
+.calc-box{
+  background:var(--card);border:1px solid var(--line);border-radius:12px;
+  padding:28px;margin:28px 0;
+}
+.calc-row{display:flex;flex-wrap:wrap;gap:22px;margin-bottom:22px;}
+.calc-field{flex:1;min-width:200px;}
+.calc-field label{display:block;font-size:13px;color:var(--ink-soft);margin-bottom:8px;}
+.calc-field .val{font-weight:700;color:var(--sky-deep);}
+.calc-field input[type=range]{width:100%;accent-color:var(--sky);}
+.calc-result{display:flex;gap:18px;flex-wrap:wrap;}
+.calc-result .res{
+  flex:1;min-width:150px;background:var(--sky-pale);border-radius:10px;padding:16px 18px;text-align:center;
+}
+.calc-result .res.ground{background:#f0ede3;}
+.calc-result .res .big{font-size:30px;font-weight:700;color:var(--sky-deep);font-family:'Noto Serif TC',serif;}
+.calc-result .res.ground .big{color:var(--ink-soft);}
+.calc-result .res .lbl{font-size:12.5px;color:var(--ink-soft);margin-top:4px;}
+.calc-note{font-size:12.5px;color:var(--ink-soft);margin-top:14px;}
+
+/* map-ish list */
+.site-list{list-style:none;margin:28px 0;padding:0;display:grid;gap:12px;}
+.site-list li{
+  display:flex;gap:14px;align-items:flex-start;
+  background:var(--card);border:1px solid var(--line);border-radius:8px;padding:14px 18px;
+}
+.site-list .dot{
+  flex:0 0 auto;width:30px;height:30px;border-radius:50%;
+  background:var(--sky-pale);color:var(--sky-deep);
+  display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;
+}
+.site-list b{display:block;color:var(--ink);}
+.site-list span{font-size:13.5px;color:var(--ink-soft);}
+
+/* walls */
+.wall-grid{display:grid;gap:16px;margin:28px 0;}
+@media(min-width:720px){.wall-grid{grid-template-columns:repeat(3,1fr);}}
+.wall{
+  background:var(--card);border:1px solid var(--line);border-radius:10px;padding:22px;
+  border-top:4px solid var(--rust);
+}
+.wall h3{margin:0 0 10px;font-size:16px;color:var(--rust-deep);}
+.wall p{font-size:14px;color:var(--ink-soft);margin:0;}
+
+/* closing */
+.closing{
+  background:var(--sky-deep);color:#fff;padding:80px 0;text-align:center;
+}
+.closing .quote2{
+  font-family:'Noto Serif TC',serif;font-size:clamp(22px,3.4vw,30px);
+  line-height:1.6;max-width:680px;margin:0 auto 24px;
+}
+.closing p.sub{color:rgba(255,255,255,0.72);font-size:15px;max-width:580px;margin:0 auto;}
+
+/* refs */
+.refs{font-size:13px;color:var(--ink-soft);}
+.refs ol{padding-left:20px;}
+.refs li{margin-bottom:10px;}
+.refs a{color:var(--sky-deep);}
+
+footer{padding:36px 0 60px;font-size:12.5px;color:var(--ink-soft);text-align:center;}
+
+@media(max-width:600px){
+  header.hero{padding:72px 0 48px;}
+  section{padding:48px 0;}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-kicker">獨立研究筆記 · 低空經濟 / eVTOL</div>
+    <h1>松山讓出的,不只是一塊地,<br>還有頭頂上<em>那片天</em>。</h1>
+    <p class="hero-dek">所有人都在爭論三百公頃的地要怎麼分,一則臉書貼文卻把戰場搬到了天上——那裡,可能才是台北下一個二十年真正稀缺的東西。這篇筆記整理「空中計程車」提案的來龍去脈、全球進度,以及它與松山機場遷建爭議之間,那段被忽略的時間差。</p>
+    <div class="hero-meta">
+      <span>依據:<b>風傳媒報導</b>(2026/10/19) 整理之獨立研究,非官方政策文件</span>
+      <span>關聯專案:<a href="https://maskywg.github.io/songshan-airport-assessment/" target="_blank" rel="noopener">松山機場遷建可行性評估 →</a></span>
+    </div>
+  </div>
+</header>
+
+<nav class="toc">
+  <div class="wrap">
+    <a href="#post">貼文</a>
+    <a href="#evtol">空中計程車是什麼</a>
+    <a href="#world">世界進度表</a>
+    <a href="#companies">業者進度</a>
+    <a href="#calc">飛行試算</a>
+    <a href="#sites">起降場藍圖</a>
+    <a href="#walls">三道牆</a>
+    <a href="#taiwan">台灣走到哪</a>
+    <a href="#verdict">結論</a>
+    <a href="#refs">來源</a>
+  </div>
+</nav>
+
+<main>
+
+<section id="post">
+  <div class="narrow">
+    <div class="eyebrow">01 · 起點</div>
+    <h2 class="title">一則臉書貼文,掀開的新戰場</h2>
+    <p class="lead">2026年10月8日,台北市長蔣萬安提出松山機場遷建構想,原址約三百公頃土地規劃打造AI產業園區、住宅與公園<sup><a href="#ref1">1</a></sup>。輿論迅速聚焦在「地要怎麼分」——AI園區多大、住宅多少、公園留多少。</p>
+    <p>但前政務委員張景森在臉書發表的評論,把問題拉到了另一個維度。他主張,松山機場真正限制台北發展的,不是跑道佔用的土地,而是機場飛航管制空域,長年佔住了台北市最珍貴、也最稀缺的「低空」資源——他估算這塊受限空域約涵蓋213公頃<sup><a href="#ref1">1</a></sup>,與蔣萬安提出的300公頃土地數字並非同一件事,但常被放在一起討論。</p>
+    <div class="quote">
+      松機的航道與飛航管制空域,占用了台北最重要的低空空間,將成為未來低空航路與營運容量的最大限制。
+      <cite>——張景森,臉書貼文,經風傳媒報導(2026/10/19)<sup><a href="#ref1">1</a></sup></cite>
+    </div>
+    <p>換句話說:這篇貼文的核心論點,不是「要不要遷機場」,而是——即使機場的去留懸而未決,台北都該現在就開始規劃屬於自己的低空空域,否則會錯過一個正在全球快速成形的產業窗口。</p>
+  </div>
+</section>
+
+<section class="alt" id="evtol">
+  <div class="narrow">
+    <div class="eyebrow">02 · 技術解析</div>
+    <h2 class="title">「空中計程車」,到底是什麼?</h2>
+    <p>張景森所說的空中計程車,指的是<b>eVTOL</b>(electric Vertical Take-Off and Landing,電動垂直起降航空器)。它的賣點很直接:像直升機一樣垂直起降,不需要長跑道,但用多組電動旋翼取代傳統引擎,理論上更安靜、更便宜、維護成本更低,適合在城市裡做短程、點對點的接駁。</p>
+
+    <div class="grid cols-2">
+      <div class="card">
+        <span class="num">案例 · 美國</span>
+        <h3>Joby Aviation</h3>
+        <p>目前全球進度最靠前的業者之一。2021年商業計畫曾估算,量產後單機製造成本約130萬美元(約新台幣4,000多萬元)<sup><a href="#ref1">1</a></sup>——但這是製造成本,不是乘客票價,文章特別強調不能直接換算成「搭一次要多少錢」。</p>
+      </div>
+      <div class="card">
+        <span class="num">2026年現況</span>
+        <h3>卡在認證的最後一哩</h3>
+        <p>截至2026年第二季,Joby在美國FAA的五階段機型認證中,第四階段完成度約75%,目標在德州於9月展開eIPP試飛,並仍以2026年內載到第一批付費乘客為目標<sup><a href="#ref2">2</a></sup><sup><a href="#ref3">3</a></sup>。2025年已累積超過600次試飛,但第二季虧損達2.45億美元,研發支出就花了1.95億美元<sup><a href="#ref2">2</a></sup>。</p>
+      </div>
+    </div>
+    <p class="calc-note">也就是說:即便是進度最快的業者,2026年仍是「準備載客」而非「已經載客」的階段。技術可行,商業化的時間表卻一直在往後滑。</p>
+  </div>
+</section>
+
+<section id="world">
+  <div class="wrap">
+    <div class="eyebrow">03 · 國際對照</div>
+    <h2 class="title">世界進度表:誰先飛,誰還在等牌照</h2>
+    <p class="lead">張景森的貼文提到美國、日本、歐洲、中國大陸都在推進類似計畫。把時間軸攤開來看,會發現「進度不一」這句話背後,差距其實不小。</p>
+
+    <div class="timeline">
+      <div class="tl-row">
+        <div class="tl-flag">美國<small>FAA</small></div>
+        <div class="tl-body">
+          <span class="status mid">認證收尾</span>
+          <p>FAA推動「Innovate28」計畫,目標在2028年前建立先進空中交通的初期營運能力<sup><a href="#ref1">1</a></sup>。Joby已完成多數機型認證階段,目標2026年內首批載客,但尚未實現;已持有Part 135營運許可(傳統機型)<sup><a href="#ref2">2</a></sup><sup><a href="#ref3">3</a></sup>。</p>
+        </div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-flag">日本<small>大阪關西</small></div>
+        <div class="tl-body">
+          <span class="status mid">試飛階段</span>
+          <p>2026年3月修訂「空中移動革命路線圖」,規劃2027年起在部分地區商業運航<sup><a href="#ref1">1</a></sup>。JAL與住友商事合資的Soracle,2025年9月已與大阪府市簽署合作協議,三方瞄準2027年內啟動商業運航,初期以大阪灣路線為主<sup><a href="#ref6">6</a></sup>。2025年大阪關西萬博期間,ANA、JAL、丸紅、SkyDrive四組業者已獲選為會場接駁運營商,作為正式商轉前的過渡<sup><a href="#ref7">7</a></sup>。</p>
+        </div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-flag">中國大陸<small>億航 / 沃蘭特</small></div>
+        <div class="tl-body">
+          <span class="status stall">取證後延宕</span>
+          <p>億航EH216-S已取得營運合格證,2026年第一季原規劃3月開放售票觀光飛行<sup><a href="#ref9">9</a></sup>,但第二季一起有人輕航機事故,使監管機關轉趨保守,合肥的載客商轉審批延後,公司因此撤回全年營收指引<sup><a href="#ref10">10</a></sup>;廣州已開始點對點試營運,海外則轉向泰國曼谷、普吉、蘇美島、芭達雅布局,目標年底取得正式商轉證<sup><a href="#ref10">10</a></sup>。另一業者上海沃蘭特航空,爭取2026年取證,估算5分鐘可飛20公里,單次成本約人民幣60元,已接近計程車價格,並已累積700餘架意向訂單<sup><a href="#ref12">12</a></sup>。</p>
+        </div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-flag">台灣<small>澎湖試點</small></div>
+        <div class="tl-body">
+          <span class="status early">規劃起步</span>
+          <p>目前沒有政府正式發布的空中計程車或低空經濟政策文件。最具體的進展,是日商SkyDrive與台灣無人機公司7A Drones、工研院三方合作,規劃2028年在澎湖啟動緊急醫療運輸,首條航線擬連接馬公市與虎井嶼<sup><a href="#ref9">9</a></sup>。</p>
+        </div>
+      </div>
+    </div>
+    <p class="calc-note">把這張表放在一起看,會發現一件事:沒有一個地方的eVTOL已經「正常載客運營」。進度最快的美國、中國大陸業者都還卡在認證或監管收緊的關卡上。這正是張景森論點裡最容易被忽略的前提——他談的是一個尚未成熟、仍在高速變動中的產業。</p>
+  </div>
+</section>
+
+<section class="alt" id="companies">
+  <div class="wrap">
+    <div class="eyebrow">04 · 業者名單</div>
+    <h2 class="title">各家業者,飛到哪了?</h2>
+    <p class="lead">把鏡頭拉近一點,看看撐起上面那張時間表的,究竟是哪些公司——以及它們各自卡在哪一關。這個產業燒錢速度極快,兩家歐洲先驅甚至已經在這一兩年內倒下。</p>
+
+    <div class="co-grid">
+      <div class="co-card">
+        <div class="co-top"><h3>Joby Aviation</h3><span class="status mid">認證收尾</span></div>
+        <span class="flag">美國</span>
+        <p>FAA五階段機型認證中,第四階段完成度約75%,目標2026年內載客,2025年已累積600+次試飛,但Q2虧損2.45億美元<sup><a href="#ref2">2</a></sup><sup><a href="#ref3">3</a></sup>。</p>
+      </div>
+      <div class="co-card">
+        <div class="co-top"><h3>Archer Aviation</h3><span class="status ahead">法規突破</span></div>
+        <span class="flag">美國 / 阿拉伯聯合大公國</span>
+        <p>2026年5月,其Midnight機型獲阿聯酋民航總局(GCAA)納入「限制型別適航證」(RTC)認證路徑,是全球首家eVTOL業者取得此進展;在美國也已完成FAA全部合規文件,同樣以2026年載客為目標<sup><a href="#ref13">13</a></sup>。</p>
+      </div>
+      <div class="co-card">
+        <div class="co-top"><h3>Wisk Aero</h3><span class="status early">探索合作</span></div>
+        <span class="flag">美國(Boeing子公司)</span>
+        <p>主打「無人駕駛」空中計程車,已公開第六代機型Gen 6,並與日本航空(JAL)簽署合作備忘錄,探索自駕空中計程車在日本的應用——但JAL尚未承諾採購機型<sup><a href="#ref14">14</a></sup>。</p>
+      </div>
+      <div class="co-card">
+        <div class="co-top"><h3>Vertical Aerospace</h3><span class="status early">試飛階段</span></div>
+        <span class="flag">英國</span>
+        <p>VX4機型已完成首階段有人試飛(20次),蒐集性能資料;與日本丸紅合作,規劃在大阪灣進行有人eVTOL示範飛行,目標年份為2026年<sup><a href="#ref6">6</a></sup>。公開資訊有限,最新認證進度尚待官方公告確認。</p>
+      </div>
+      <div class="co-card">
+        <div class="co-top"><h3>Lilium</h3><span class="status halt">聲請破產</span></div>
+        <span class="flag">德國</span>
+        <p>歐洲最早的eVTOL先驅之一,2024年10月首次聲請破產,募資案一度出現逾2億歐元的拯救方案,但2025年2月21日二度聲請破產,裁員逾千人,營運停止<sup><a href="#ref15">15</a></sup>。</p>
+      </div>
+      <div class="co-card">
+        <div class="co-top"><h3>Volocopter</h3><span class="status halt">聲請破產</span></div>
+        <span class="flag">德國</span>
+        <p>同為德國eVTOL代表業者,2024年12月26日向卡爾斯魯厄地方法院聲請破產,進入臨時破產管理程序,管理人持續尋找新投資人,後續結果尚待追蹤<sup><a href="#ref16">16</a></sup>。</p>
+      </div>
+      <div class="co-card">
+        <div class="co-top"><h3>億航 EHang</h3><span class="status stall">取證後延宕</span></div>
+        <span class="flag">中國大陸</span>
+        <p>EH216-S已取得營運合格證,但2026年Q2一起有人輕航機事故使監管轉趨保守,合肥載客商轉延後,公司已撤回全年營收指引,轉而加速布局泰國市場<sup><a href="#ref10">10</a></sup>。</p>
+      </div>
+      <div class="co-card">
+        <div class="co-top"><h3>上海沃蘭特航空</h3><span class="status mid">爭取取證</span></div>
+        <span class="flag">中國大陸</span>
+        <p>VE25機型,爭取2026年取證,估算5分鐘可飛20公里、單次成本約人民幣60元,已接近計程車價格,累積700餘架意向訂單<sup><a href="#ref12">12</a></sup>。</p>
+      </div>
+      <div class="co-card">
+        <div class="co-top"><h3>小鵬匯天 XPeng AeroHT</h3><span class="status mid">籌備量產</span></div>
+        <span class="flag">中國大陸</span>
+        <p>分體式飛行汽車「陸地航母」:雙人eVTOL飛行器搭配六輪地面載具充電收納,目標2026年下半年開始交付,已獲超過5,000筆訂單,廣州新廠已動工,曾取得CAAC南部管理局適航認證<sup><a href="#ref17">17</a></sup>。</p>
+      </div>
+      <div class="co-card">
+        <div class="co-top"><h3>SkyDrive</h3><span class="status early">離島醫療試點</span></div>
+        <span class="flag">日本</span>
+        <p>2025年獲選為大阪關西萬博會場接駁運營商之一;同時與台灣7A Drones、工研院合作,規劃2028年在澎湖啟動eVTOL緊急醫療運輸<sup><a href="#ref7">7</a></sup><sup><a href="#ref9">9</a></sup>。</p>
+      </div>
+    </div>
+    <p class="calc-note">把這張名單放在一起看,會發現這個產業有兩個同時存在的事實:一邊是Archer拿到全球首張「限制型別適航證」路徑、中國業者衝刺量產交付;另一邊是兩家德國先驅在一年內先後倒下。技術方向確定,但商業模式與資金链能不能撐到載客運營那一天,仍是最大的未知數。</p>
+  </div>
+</section>
+
+<section id="calc">
+  <div class="wrap">
+    <div class="eyebrow">05 · 親自算一次</div>
+    <h2 class="title">天上比地上,快多少?</h2>
+    <p class="lead">貼文裡舉了一個例子:桃園機場到北士科(輝達台灣總部所在地)直線距離約28公里。若空中計程車以平均時速180公里飛行,約9分鐘可達;相對地,若在松山機場降落再轉乘地面交通,最後8.8公里的尖峰車程約需26分鐘<sup><a href="#ref1">1</a></sup>。拉動下面的滑桿,套用不同的距離與速度,看看差距會怎麼變化——但別忘了,這個數字沒有把起降排隊、轉乘、航管調度與天候因素算進去。</p>
+
+    <div class="calc-box">
+      <div class="calc-row">
+        <div class="calc-field">
+          <label>飛行直線距離 <span class="val" id="distVal">28</span> 公里</label>
+          <input type="range" id="dist" min="5" max="60" value="28" step="1">
+        </div>
+        <div class="calc-field">
+          <label>空中計程車平均時速 <span class="val" id="airSpeedVal">180</span> 公里/時</label>
+          <input type="range" id="airSpeed" min="80" max="300" value="180" step="10">
+        </div>
+        <div class="calc-field">
+          <label>地面接續路程 <span class="val" id="groundDistVal">8.8</span> 公里</label>
+          <input type="range" id="groundDist" min="1" max="20" value="8.8" step="0.1">
+        </div>
+        <div class="calc-field">
+          <label>尖峰時段地面均速 <span class="val" id="groundSpeedVal">20</span> 公里/時</label>
+          <input type="range" id="groundSpeed" min="8" max="50" value="20" step="1">
+        </div>
+      </div>
+      <div class="calc-result">
+        <div class="res air">
+          <div class="big" id="airTime">9.3 分</div>
+          <div class="lbl">空中計程車飛行時間<br>(不含起降與轉乘)</div>
+        </div>
+        <div class="res ground">
+          <div class="big" id="groundTime">26.4 分</div>
+          <div class="lbl">降落松機後<br>地面接續車程</div>
+        </div>
+      </div>
+      <p class="calc-note">試算方式:飛行時間 = 直線距離 ÷ 空中計程車時速;地面時間 = 地面接續路程 ÷ 尖峰時段均速。兩者都只計算「移動中」的時間,實際還要加上候機、起降排隊、安檢與轉乘等候等環節——這些隱藏成本,才是eVTOL能否真正比開車快的關鍵。</p>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="sites">
+  <div class="wrap">
+    <div class="eyebrow">06 · 藍圖</div>
+    <h2 class="title">張景森的起降場清單</h2>
+    <p class="lead">貼文裡具體點名了幾類場所,認為可以研究設置或共用合法的空中計程車起降場(vertiport)<sup><a href="#ref1">1</a></sup>:</p>
+    <ul class="site-list">
+      <li><span class="dot">商</span><div><b>北士科(北投士林科技園區)</b><span>輝達(NVIDIA)台灣總部所在地,是文中試算範例的目的地,也是未來低空接駁需求最具體的商務場景。</span></div></li>
+      <li><span class="dot">商</span><div><b>內湖科技園區</b><span>台北既有的科技/軟體業聚落,長年受塞車困擾之苦的區域之一。</span></div></li>
+      <li><span class="dot">商</span><div><b>南港</b><span>軌道與展覽、研發機能並存的區域,鄰近南港車站轉乘節點。</span></div></li>
+      <li><span class="dot">政</span><div><b>總統府、行政院、國防部</b><span>政府核心機關,屬於目前飛航管制最嚴格的區域,若納入討論,代表這套構想必須正面處理國安與禁航空域的既有規則。</span></div></li>
+      <li><span class="dot">醫</span><div><b>醫學中心</b><span>呼應低空經濟裡「緊急醫療後送」的應用場景,而非單純的商務接駁。</span></div></li>
+    </ul>
+    <div class="callout gold">
+      <b class="tag">不只載人</b>
+      張景森的貼文也把討論範圍拉得更寬:低空經濟不只是空中計程車,還包括無人機物流、緊急醫療後送、救災與設施巡檢。這些應用共用同一套底層需求——起降場、充電設施、航路規劃、通訊導航系統,以及對應的法規<sup><a href="#ref1">1</a></sup>。
+    </div>
+  </div>
+</section>
+
+<section id="walls">
+  <div class="wrap">
+    <div class="eyebrow">07 · 現實</div>
+    <h2 class="title">擋在路上的,是三道牆</h2>
+    <p class="lead">貼文本身也坦承,這套構想要落地,還有幾個繞不開的問題——只是他認為,這些都該透過「重新規劃空域」來處理,而不是拿來當作停止討論的理由<sup><a href="#ref1">1</a></sup>。</p>
+    <div class="wall-grid">
+      <div class="wall">
+        <h3>國家安全</h3>
+        <p>總統府、行政院、國防部周邊本就是高敏感度的禁航或限航區域,任何低空載人載具的規劃,都必須先取得國安系統的同意與配套。</p>
+      </div>
+      <div class="wall">
+        <h3>軍事限航</h3>
+        <p>台北及周邊空域本就疊加大量軍事管制區塊,這是台灣相較於其他城市更特殊的限制條件,也是文中僅點出問題、未提出具體解方的部分。</p>
+      </div>
+      <div class="wall">
+        <h3>飛航安全與噪音</h3>
+        <p>即使eVTOL比直升機安靜,大量低空載具進出市區,仍會牽動一般居民的接受度,以及既有航空法規對「可承受風險」的定義。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="taiwan">
+  <div class="narrow">
+    <div class="eyebrow">08 · 台灣現況</div>
+    <h2 class="title">台灣,目前走到哪一步?</h2>
+    <p>相較於文中提到的各國進度,台灣目前唯一具體落地的計畫,其實不在台北,而是在澎湖。日商SkyDrive與台灣無人機公司7A Drones、工研院三方結盟,正把一項eVTOL緊急醫療運輸計畫,從可行性研究推進到籌備階段<sup><a href="#ref9">9</a></sup>。</p>
+    <div class="grid cols-2">
+      <div class="card">
+        <span class="num">航線規劃</span>
+        <h3>馬公市 ↔ 虎井嶼</h3>
+        <p>三方將先從這條離島航線著手,再評估澎湖群島其他潛在航線,目標是2028年啟動緊急醫療運輸<sup><a href="#ref9">9</a></sup>。</p>
+      </div>
+      <div class="card">
+        <span class="num">採購與基礎建設</span>
+        <h3>10架意向訂單</h3>
+        <p>7A Drones已預訂最多十架SkyDrive機型,工作項目包括永久垂直起降場選址、臨時緊急降落點、充電設施,以及支援營運的空域管理系統<sup><a href="#ref9">9</a></sup>。</p>
+      </div>
+    </div>
+    <p>換句話說:台灣目前真正往前推進的案例,場景是「離島醫療」,不是「城市通勤」。張景森貼文裡描繪的台北低空接駁網絡,目前仍停留在個人倡議階段,沒有找到對應的政府研究或預算規劃。</p>
+  </div>
+</section>
+
+<section id="verdict">
+  <div class="wrap">
+    <div class="eyebrow">09 · 結論</div>
+    <h2 class="title">這跟松機遷建,到底有沒有關係?</h2>
+    <p class="lead">把所有線索放在一起,會看到一段容易被忽略的時間差。</p>
+    <div class="callout">
+      <b class="tag">時間軸錯位</b>
+      松山機場即使確定遷建,最快也要到2033年以後才可能真正空出來<sup><a href="#ref1">1</a></sup>。而全球eVTOL產業,2026年才剛要從「試飛」走向「初期商轉」——Joby還在等FAA最後一哩認證,億航遇上監管轉趨保守而延宕,日本的商業運航目標設在2027年。等松機真正空出跑道的那一天,低空載具產業的格局,很可能早已經洗牌過好幾輪。
+    </div>
+    <p>這正是張景森論點裡,最核心也最容易被誤讀的部分:他不是在說「松機遷建之後台北就能有空中計程車」,而是在說——<b>不管松機最終遷或不遷、什麼時候遷,台北都應該現在就開始研究自己的低空空域規劃</b>,否則等到真正需要用的時候,會發現這塊空域的使用規則、技術標準、甚至市場位置,早就被別人定義好了。</p>
+    <p>但這個論點目前仍停留在一篇臉書貼文與媒體報導的層次。它沒有附帶可行性研究、沒有預算規劃,也沒有看到交通部或台北市政府的正式回應。文中引用的9分鐘飛行試算,也只是示意性的理想值,沒有算進起降排隊、轉乘等候與空域調度——這些往往才是決定一套低空接駁系統能不能真的比開車快的關鍵。換句話說,這是一個值得認真研究的方向,但距離「可以動工的計畫」,還有不小的距離。</p>
+  </div>
+</section>
+
+<div class="closing">
+  <div class="wrap">
+    <div class="quote2">地上的三百公頃,看得到、量得出、吵得清楚。頭上那片天,卻要等一則貼文,才有人想起它也在被使用——而且正在被重新定義。</div>
+    <p class="sub">本頁為依據公開報導整理的獨立研究筆記,觀點歸屬原發言者與原始報導,非官方政策文件。</p>
+  </div>
+</div>
+
+<section id="refs">
+  <div class="narrow refs">
+    <h2 class="title" style="font-size:20px;">參考來源</h2>
+    <ol>
+      <li id="ref1">張大任,〈松機遷建的視野之爭:張景森談低空經濟與空中計程車〉,《風傳媒》,2026/10/19。<a href="https://www.storm.mg/article/11173731" target="_blank" rel="noopener">storm.mg/article/11173731</a></li>
+      <li id="ref2">Kavout Market Lens,〈Joby Aviation's Sky-High Ambition: Can Certification and Scale Justify a 10x Leap?〉。<a href="https://www.kavout.com/market-lens/joby-aviation-s-sky-high-ambition-can-certification-and-scale-justify-a-10x-leap" target="_blank" rel="noopener">kavout.com</a></li>
+      <li id="ref3">Transport Topics,〈Joby Targets 2026 US Air Taxi Launch〉。<a href="https://www.ttnews.com/articles/joby-targets-2026-us-launch" target="_blank" rel="noopener">ttnews.com</a></li>
+      <li id="ref4">Gulf News,〈Air taxi maker Joby Aviation enters final stages of FAA certification ahead of Dubai launch〉。<a href="https://gulfnews.com/business/aviation/air-taxi-maker-joby-aviation-enters-final-stages-of-faa-certification-ahead-of-dubai-launch-1.500337553" target="_blank" rel="noopener">gulfnews.com</a></li>
+      <li id="ref5">Nasdaq,〈Is JOBY Worth Buying as Commercial Progress Meets Execution Risk?〉。<a href="https://www.nasdaq.com/articles/joby-worth-buying-commercial-progress-meets-execution-risk" target="_blank" rel="noopener">nasdaq.com</a></li>
+      <li id="ref6">Aviation Wire,〈JAL・住友商事のSoracle、大阪府市と連携協定〉,2025/09/11。<a href="https://www.aviationwire.jp/archives/330503" target="_blank" rel="noopener">aviationwire.jp</a></li>
+      <li id="ref7">Travel Voice,〈Four 'Flying Car' operators in Osaka Expo are selected as a step to commercialization in Japan〉。<a href="https://travelvoice.jp/english/four-flying-car-operators-in-osaka-expo-are-selected-as-a-step-to-commercialization-in-japan" target="_blank" rel="noopener">travelvoice.jp</a>;中文報導見<a href="https://www.inside.com.tw/article/30848-flying-car-expo-2025-osaka" target="_blank" rel="noopener">inside.com.tw</a></li>
+      <li id="ref9">Air Med & Rescue,〈SkyDrive advances plans for eVTOL medical transport network in Taiwan〉。<a href="https://www.airmedandrescue.com/latest/news/skydrive-advances-plans-evtol-medical-transport-network-taiwan" target="_blank" rel="noopener">airmedandrescue.com</a></li>
+      <li id="ref10">Helihub,〈EHang reports 2026 Q1 Unaudited Financial Results〉;MarketBeat,〈Transcript: EHang Q2 2026 Earnings Call Highlights〉。<a href="https://www.helihub.com/2026/06/10/ehang-reports-first-quarter-2026-unaudited-financial-results/" target="_blank" rel="noopener">helihub.com</a> / <a href="https://www.marketbeat.com/instant-alerts/transcript-ehang-q2-earnings-call-highlights-2026-08-25/" target="_blank" rel="noopener">marketbeat.com</a></li>
+      <li id="ref12">鉅亨網,〈5分鐘飛20公里成本60元,上海「空中計程車」要來了〉。<a href="https://hao.cnyes.com/post/79610" target="_blank" rel="noopener">hao.cnyes.com</a></li>
+      <li id="ref13">Gulf News,〈Archer begins test flights in Abu Dhabi for air taxi rollout, targeting UAE commercial launch〉;Arabian Business,〈UAE to begin air taxi flights as early as 2026〉。<a href="https://gulfnews.com/business/aviation/archer-begins-test-flights-in-abu-dhabi-for-air-taxi-rollout-targeting-uae-commercial-launch-1.500185071" target="_blank" rel="noopener">gulfnews.com</a> / <a href="https://www.arabianbusiness.com/industries/transport/uae-to-begin-air-taxi-flights-as-early-as-2026-saudi-may-follow-before-2030-archer-cco" target="_blank" rel="noopener">arabianbusiness.com</a></li>
+      <li id="ref14">eplaneAI,〈Five Air Taxis Poised to Shape Urban Mobility by 2026〉。<a href="https://www.eplaneai.com/news/five-air-taxis-poised-to-shape-urban-mobility-by-2026" target="_blank" rel="noopener">eplaneai.com</a></li>
+      <li id="ref15">ch-aviation,〈Germany's Lilium files for final insolvency〉。<a href="https://www.ch-aviation.com/news/150719-germanys-lilium-files-for-final-insolvency" target="_blank" rel="noopener">ch-aviation.com</a></li>
+      <li id="ref16">Silicon Canals,〈Volocopter files for insolvency〉。<a href="https://siliconcanals.com/volocopter-files-for-insolvency/" target="_blank" rel="noopener">siliconcanals.com</a></li>
+      <li id="ref17">SCMP,〈AeroHT gears up for European flying car debut as Xpeng affiliate clocks 5,000 orders〉;CnEVPost,〈Xpeng Aeroht aims to start delivering modular flying car in 2026〉。<a href="https://www.scmp.com/business/china-business/article/3325030/aeroht-gears-european-flying-car-debut-xpeng-affiliate-clocks-5000-orders" target="_blank" rel="noopener">scmp.com</a> / <a href="https://cnevpost.com/2024/09/03/xpeng-aeroht-to-start-delivering-modular-flying-car-2026/" target="_blank" rel="noopener">cnevpost.com</a></li>
+    </ol>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  整理製作:獨立研究筆記 · 2026年10月 · 延伸閱讀 <a href="https://maskywg.github.io/songshan-airport-assessment/" target="_blank" rel="noopener">松山機場遷建可行性評估</a>
+</footer>
+
+<script>
+(function(){
+  const dist=document.getElementById('dist');
+  const airSpeed=document.getElementById('airSpeed');
+  const groundDist=document.getElementById('groundDist');
+  const groundSpeed=document.getElementById('groundSpeed');
+  const distVal=document.getElementById('distVal');
+  const airSpeedVal=document.getElementById('airSpeedVal');
+  const groundDistVal=document.getElementById('groundDistVal');
+  const groundSpeedVal=document.getElementById('groundSpeedVal');
+  const airTime=document.getElementById('airTime');
+  const groundTime=document.getElementById('groundTime');
+
+  function update(){
+    const d=parseFloat(dist.value);
+    const as=parseFloat(airSpeed.value);
+    const gd=parseFloat(groundDist.value);
+    const gs=parseFloat(groundSpeed.value);
+    distVal.textContent=d;
+    airSpeedVal.textContent=as;
+    groundDistVal.textContent=gd.toFixed(1);
+    groundSpeedVal.textContent=gs;
+    const at=(d/as)*60;
+    const gt=(gd/gs)*60;
+    airTime.textContent=at.toFixed(1)+' 分';
+    groundTime.textContent=gt.toFixed(1)+' 分';
+  }
+  [dist,airSpeed,groundDist,groundSpeed].forEach(el=>el.addEventListener('input',update));
+  update();
+})();
+</script>
+
+</body>
+</html>
